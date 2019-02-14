@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+
+    <Canvas Background="PowderBlue" Width="1000" Height="1000" MouseDown="Canvas_MouseDown">
+
+        <Canvas x:Name="CanvasA" Canvas.Top="0" Canvas.Left="319" Width="81.718" Height="100" Background="Blue" />
+        <Canvas x:Name="CanvasB" Canvas.Top="250" Canvas.Left="200" Width="30" Height="80" Background="Green" />
+
+
+        <Glyphs 
+         x:Name="aaa"
+         FontUri             = "C:\WINDOWS\Fonts\meiryo.ttc"
+         FontRenderingEmSize = "80"
+         StyleSimulations    = "BoldSimulation"
+         UnicodeString       = "全角Helgo World!"
+         IsSideways          = "True"   
+         Fill                = "Black"
+         OriginX             = "0"
+         OriginY             = "40"
+         Canvas.Top          = "30"
+         Canvas.Left         = "400"
+         Width               = "800"
+         Height              = "80"
+         >
+            <Glyphs.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="90" />
+                </TransformGroup>
+            </Glyphs.RenderTransform>
+        </Glyphs>
+
+
+        <Glyphs 
+         x:Name="bbb"
+         FontUri             = "C:\WINDOWS\Fonts\YuGothL.ttc"
+         FontRenderingEmSize = "60"
+         StyleSimulations    = "BoldSimulation"
+         UnicodeString       = "Hello World!"
+         Indices             = ",100;,80;,80;,80;,80;,80;,80;,80;,80;,80;,80"
+         IsSideways          = "True"
+         Fill                = "Red"
+         OriginX             = "0"
+         OriginY             = "60"
+         Canvas.Top          = "15.1953125"
+         Canvas.Left         = "90"
+         Width               = "1000"
+         >
+            <Glyphs.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="90" />
+                </TransformGroup>
+            </Glyphs.RenderTransform>
+        </Glyphs>
+
+    </Canvas>
+</Window>
